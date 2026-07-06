@@ -1,5 +1,5 @@
 services:
-  cinema:
+  app:
     build:
       context: .
     env_file:
@@ -14,10 +14,10 @@ services:
              python manage.py migrate &&
              python manage.py runserver 0.0.0.0:8000"
     depends_on:
-      - cinema_db
+      - db
 
 
-  cinema_db:
+  db:
     image: postgres:18.4-alpine3.24
     restart: always
     env_file:

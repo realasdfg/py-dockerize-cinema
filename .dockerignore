@@ -1,6 +1,8 @@
 .github/
 .idea/
 .venv/
+__pycache__/
+*.pyc
 .gitignore
 docker-compose.yml
 Dockerfile
